@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "ShadowCalc by AIShadow",
+  "short_name": "ShadowCalc",
+  "description": "Standard & scientific calculator, unit converter and currency converter that works offline.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#070c18",
+  "theme_color": "#070c18",
+  "categories": ["utilities", "productivity", "finance", "education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,37 @@
+# Windows installer configuration for ShadowCalc.
+# Build with:  npm run dist:win   (output in ./release)
+appId: com.aishadow.shadowcalc
+productName: ShadowCalc
+copyright: Copyright © 2026 Hassan Malik · AIShadow
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**
+  - electron/**
+  - build/icon.png
+  - package.json
+asar: true
+win:
+  icon: build/icon.ico
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+  artifactName: ${productName}-${version}-${arch}.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: ShadowCalc
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  artifactName: ${productName}-Setup-${version}.${ext}
+portable:
+  artifactName: ${productName}-Portable-${version}.${ext}
+
+# No auto-update server; releases are downloaded from GitHub.
+publish: null

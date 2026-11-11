@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>ShadowCalc — Calculator, Unit &amp; Currency Converter</title>
+    <meta
+      name="description"
+      content="A fast, accessible calculator suite: standard and scientific calculator, unit converter and live currency converter."
+    />
+    <meta name="author" content="Hassan Malik (AIShadow)" />
+    <meta name="theme-color" content="#070c18" />
+    <meta property="og:title" content="ShadowCalc" />
+    <meta
+      property="og:description"
+      content="Standard & scientific calculator, unit converter and live currency converter in one polished app."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="./favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="ShadowCalc" />
+    <script>
+      // Apply the saved/system theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var saved = JSON.parse(localStorage.getItem('shadowcalc:theme'));
+          var theme =
+            saved === 'light' || saved === 'dark'
+              ? saved
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>ShadowCalc needs JavaScript enabled to run.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
