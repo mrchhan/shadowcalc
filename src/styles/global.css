@@ -739,6 +739,13 @@ p {
   color: var(--danger);
 }
 
+/* Touch-only devices (phones, most tablets) have no keyboard to use these with. */
+@media (hover: none) and (pointer: coarse) {
+  .panel--shortcuts {
+    display: none;
+  }
+}
+
 .shortcuts {
   display: grid;
   gap: 8px;

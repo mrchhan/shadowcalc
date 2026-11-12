@@ -176,7 +176,7 @@ export function Calculator({ scientific }: CalculatorProps) {
           )}
         </details>
 
-        <details className="panel">
+        <details className="panel panel--shortcuts">
           <summary className="panel__summary">
             <KeyboardIcon /> Keyboard shortcuts
           </summary>
