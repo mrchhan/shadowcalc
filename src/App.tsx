@@ -13,6 +13,7 @@ import {
   SunIcon,
 } from './components/icons/Icons';
 import { ModeTabs, type TabDef } from './components/ModeTabs';
+import { Splash } from './components/Splash';
 import { oneOf, usePersistentState } from './hooks/usePersistentState';
 import { useInstallPrompt } from './hooks/useInstallPrompt';
 import { useOnline } from './hooks/useOnline';
@@ -44,14 +45,20 @@ export default function App() {
 
   return (
     <div className="app">
+      <div className="app-bg" aria-hidden="true" />
+      <Splash />
       <a className="skip-link" href="#main">
         Skip to content
       </a>
       <header className="app__header">
         <div className="brand">
-          <img className="brand__logo" src={logoUrl} alt="" width={40} height={40} />
-          <span className="brand__name">ShadowCalc</span>
-          <span className="brand__by">by AIShadow</span>
+          <span className="brand__logo-wrap">
+            <img className="brand__logo" src={logoUrl} alt="" width={40} height={40} />
+          </span>
+          <span className="brand__text">
+            <span className="brand__name">ShadowCalc</span>
+            <span className="brand__by">by Shadow Creative Studio</span>
+          </span>
         </div>
         <div className="header-actions">
           {install && (
@@ -100,7 +107,7 @@ export default function App() {
 
       <footer className="app__footer">
         <p>
-          © {new Date().getFullYear()} Hassan Malik · An AIShadow app ·{' '}
+          © {new Date().getFullYear()} Hassan Malik · A Shadow Creative Studio app ·{' '}
           <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer">
             Rates by ExchangeRate-API
           </a>

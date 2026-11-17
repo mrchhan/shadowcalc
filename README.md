@@ -5,13 +5,13 @@
 <h1 align="center">ShadowCalc</h1>
 
 <p align="center">
-  <strong>by AIShadow</strong><br />
+  <strong>by Shadow Creative Studio</strong><br />
   Standard &amp; scientific calculator, unit converter and live currency converter.<br />
   A Windows desktop app and an installable web app, and it works offline.
 </p>
 
 <p align="center">
-  <img src="https://github.com/YOUR_USERNAME/shadowcalc/actions/workflows/ci.yml/badge.svg" alt="CI" />
+  <img src="https://github.com/mrchhan/shadowcalc/actions/workflows/ci.yml/badge.svg" alt="CI" />
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" />
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Web%20%7C%20Android%20%7C%20iOS-3d9fff" alt="Platforms" />
 </p>
@@ -24,9 +24,9 @@
 
 | Platform | How to get it |
 |---|---|
-| **Windows 10/11** | Download **`ShadowCalc-Setup-1.0.0.exe`** from [Releases](https://github.com/YOUR_USERNAME/shadowcalc/releases) and run it. It adds a Start menu entry and a desktop shortcut. **`ShadowCalc-Portable-1.0.0.exe`** runs without installing. |
-| **Android / desktop Chrome or Edge** | Open the [web app](https://YOUR_USERNAME.github.io/shadowcalc/) and press **Install app** in the header (or browser menu → *Install app*). |
-| **iPhone / iPad** | Open the [web app](https://YOUR_USERNAME.github.io/shadowcalc/) in Safari → **Share** → **Add to Home Screen**. |
+| **Windows 10/11** | Download **`ShadowCalc-Setup-1.1.0.exe`** from [Releases](https://github.com/mrchhan/shadowcalc/releases) and run it. It adds a Start menu entry and a desktop shortcut. **`ShadowCalc-Portable-1.1.0.exe`** runs without installing. |
+| **Android / desktop Chrome or Edge** | Open the [web app](https://mrchhan.github.io/shadowcalc/) and press **Install app** in the header (or browser menu → *Install app*). |
+| **iPhone / iPad** | Open the [web app](https://mrchhan.github.io/shadowcalc/) in Safari → **Share** → **Add to Home Screen**. |
 
 > Windows may show *“Windows protected your PC”* because the installer isn't code-signed yet. Click **More info → Run anyway**.
 
@@ -97,7 +97,7 @@
 **Requirements:** Node.js 18.18 or later (20 or 22 recommended) and npm.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/shadowcalc.git
+git clone https://github.com/mrchhan/shadowcalc.git
 cd shadowcalc
 npm install
 npm run dev
@@ -186,7 +186,7 @@ electron/main.cjs             # Windows desktop shell (secure, serves the app fr
 electron-builder.yml          # installer config (NSIS setup + portable exe)
 scripts/build-sw.mjs          # generates the offline service worker after the build
 public/manifest.webmanifest   # installable web app manifest + icons
-build/                        # app & installer icons (from the AIShadow logo)
+build/                        # app & installer icons (ShadowCalc app icon)
 server/                       # optional zero-dependency Node server + rates proxy
 tests/                        # Vitest + Testing Library
 ```
@@ -205,8 +205,8 @@ tests/                        # Vitest + Testing Library
 ### Windows app (GitHub Releases)
 Push a version tag and GitHub builds the installer for you on a Windows machine, then attaches it to a Release:
 ```bash
-git tag v1.0.0
-git push origin v1.0.0
+git tag v1.1.0
+git push origin v1.1.0
 ```
 To build it on your own PC instead, run `npm run dist:win`. The files appear in `release/`.
 
@@ -248,6 +248,6 @@ The server sends security headers (including a hash-based Content-Security-Polic
 
 ## License
 
-[MIT](LICENSE) © 2026 Hassan Malik · AIShadow
+[MIT](LICENSE) © 2026 Hassan Malik · Shadow Creative Studio
 
 Exchange rates by [ExchangeRate-API](https://www.exchangerate-api.com) and [Frankfurter](https://frankfurter.dev).

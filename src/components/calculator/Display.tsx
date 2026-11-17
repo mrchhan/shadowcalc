@@ -36,6 +36,7 @@ export function Display({ state, preview, angleLabel }: DisplayProps) {
         <span className="display__secondary">{secondary}</span>
       </div>
       <div
+        key={state.evaluated ? `result-${state.history.length}` : 'input'}
         ref={mainRef}
         className={`display__main ${sizeClass(main)} ${state.evaluated ? 'is-result' : ''}`}
         data-testid="display-main"

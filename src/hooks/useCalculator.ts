@@ -81,8 +81,14 @@ export function useCalculator(angleMode: AngleMode, scientific: boolean, keyboar
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.ctrlKey || event.metaKey || event.altKey || isTypingTarget(event.target)) return;
-      // Let Enter/Space activate a focused button normally.
-      if ((event.key === 'Enter' || event.key === ' ') && event.target instanceof HTMLButtonElement) return;
+      // Enter always means "=" while a calculator key or mode tab has focus
+      // (otherwise it would re-press the last clicked key). For any other
+      // focused button (theme toggle, history item…) Enter/Space keep their
+      // normal meaning.
+      if ((event.key === 'Enter' || event.key === ' ') && event.target instanceof HTMLButtonElement) {
+        const isCalcKey = event.target.classList.contains('key') || event.target.getAttribute('role') === 'tab';
+        if (event.key === ' ' || !isCalcKey) return;
+      }
       const mapped = keyFromKeyboard(event, scientific);
       if (!mapped) return;
       event.preventDefault();

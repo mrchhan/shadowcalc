@@ -1,8 +1,8 @@
 {
   "name": "shadowcalc",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "ShadowCalc by AIShadow \u2014 standard & scientific calculator, unit converter and live currency converter. Works offline on Windows, web and mobile.",
+  "description": "ShadowCalc by Shadow Creative Studio \u2014 standard & scientific calculator, unit converter and live currency converter. Works offline on Windows, web and mobile.",
   "author": "Hassan Malik",
   "license": "MIT",
   "type": "module",
@@ -57,5 +57,5 @@
     }
   },
   "main": "electron/main.cjs",
-  "homepage": "https://github.com/YOUR_USERNAME/shadowcalc"
+  "homepage": "https://github.com/mrchhan/shadowcalc"
 }

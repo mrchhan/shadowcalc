@@ -2,7 +2,7 @@
 # Build with:  npm run dist:win   (output in ./release)
 appId: com.aishadow.shadowcalc
 productName: ShadowCalc
-copyright: Copyright © 2026 Hassan Malik · AIShadow
+copyright: Copyright © 2026 Hassan Malik · Shadow Creative Studio
 directories:
   output: release
   buildResources: build
